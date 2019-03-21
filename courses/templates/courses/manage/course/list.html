@@ -12,12 +12,22 @@
             <img class="img img-responsive img img-thumbnail" src="{{ course.cover.url }}" alt="" style="width: 200px; height: 170px;">
             <div class="caption" style="padding-left: 25px;">
                 <h5>{{ course.title }}&nbsp;<small style="float: right; padding-top: 5px;">{{ course.created|date:"M d, Y" }}</small></h5>
-                <a href="{% url 'courses:course_edit' course.id %}" class="btn btn-info btn-xs">
-                    <span class="glyphicon glyphicon-pencil"></span>&nbsp;
+                <a href="{% url 'courses:course_edit' course.id %}" class="btn btn-success btn-xs">
+                    <span class="glyphicon glyphicon-pencil"></span>
                 </a>
+
                 <a href="{% url 'courses:course_delete' course.id %}" class="btn btn-danger btn-xs">
-                    <span class="glyphicon glyphicon-trash"></span>&nbsp;
+                    <span class="glyphicon glyphicon-trash"></span>
                 </a>
+
+                <a href="{% url 'courses:course_module_update' course.id %}" class="btn btn-info btn-xs" style="float: right; margin: 2px;">
+                    <span class="glyphicon glyphicon-hourglass"></span>
+                </a>
+
+                <a href="{% url 'courses:module_content_list' course.modules.first.id %}" class="btn btn-info btn-xs" style="float: right; margin: 2px;">
+                    <span class="glyphicon glyphicon-book"></span>
+                </a>
+
             </div>
             </div>
             </div>

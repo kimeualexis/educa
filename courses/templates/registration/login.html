@@ -9,7 +9,8 @@
             <h3 class="text-primary text-center"><strong>Login</strong></h3>
         </div>
 
-        <form class="form-horizontal" method="post">
+        <div class="panel panel-info panel-body">
+        <form class="form-horizontal" method="post" style="padding-left: 15px; padding-right: 5px;">
             {% csrf_token %}
             <div class="form-group">
                 <input type="text" class="form-control" placeholder="Username" name="username">
@@ -22,6 +23,7 @@
             </div>
         </form>
     </div>
+        </div>
     </div>
 
 {% endblock %}

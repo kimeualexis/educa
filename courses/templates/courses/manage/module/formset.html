@@ -11,7 +11,8 @@
 
         <div class="panel-body">
     <h2 class="text-center">Course modules</h2>
-    <form class="form-horizontal" action="" method="post">
+            <hr>
+    <form class="form-horizontal" action="" method="post" style="padding-left: 70px; padding-right: 70px;">
     {{ formset|crispy }}
     {{ formset.management_form|crispy}}
     {% csrf_token %}
